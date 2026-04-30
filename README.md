@@ -33,6 +33,32 @@ A C++-driven locomotion system in Unreal Engine, focused on **gameplay–animati
 ```text
 Input → Character → MovementComponent → ClimbComponent → AnimInstance
 ```
+## Visual Overview
 
+### Animation Graph (System Data Flow)
+Core animation pipeline with layered blending, aim offset, montage integration, and IK system.
+
+![AnimGraph](Graphy.png)
+
+---
+
+### Movement State Machine (High-Level)
+Top-level movement states including Ground, Air, and Climb.
+
+![MovementStates](OnGround.png)
+
+---
+
+### Jump / Air State
+Jump → Fall → Land transition flow.
+
+![JumpStates](Jump.png)
+
+---
+
+### Locomotion State Machine (Detailed)
+Idle, MoveStart, MoveCycle, MoveStop, and Turn transitions.
+
+![LocomotionStates](State.png)
 ---
 
