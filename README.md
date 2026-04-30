@@ -45,7 +45,7 @@ Core animation pipeline with layered blending, aim offset, montage integration, 
 ### Movement State Machine (High-Level)
 Top-level movement states including Ground, Air, and Climb.
 
-![MovementStates](OnGround.png)
+![LocomotionStates](State.png)
 
 ---
 
@@ -59,6 +59,6 @@ Jump → Fall → Land transition flow.
 ### Locomotion State Machine (Detailed)
 Idle, MoveStart, MoveCycle, MoveStop, and Turn transitions.
 
-![LocomotionStates](State.png)
+![MovementStates](OnGround.png)
 ---
 
