@@ -36,8 +36,3 @@ Input → Character → MovementComponent → ClimbComponent → AnimInstance
 
 ---
 
-## Notes
-
-* Focused on **system design and gameplay–animation integration**
-* Uses client prediction + server authority (without rollback-based prediction layer)
-* Some edge cases (e.g. climb collision at top) intentionally simplified for scope clarity
