@@ -286,19 +286,6 @@ void ULocomotionInstance::CalculateFPSMoveDirection(float& MoveRightRef, float& 
 	}
 	
 	OutWarpAngle = FMath::UnwindDegrees(MoveAngle - BaseAngle);
-	/*
-	IsTest = false;
-	OutWarpAngle = FMath::UnwindDegrees(ControlToInputAngle - BaseAngle);
-	
-	//for test...
-	if (FMath::Abs(ControlToInputAngle - LastControlToInputAngle) > 30)
-	{
-		//UE_LOG(LogTemp, Warning, TEXT("OutWarpAngle %f"), OutWarpAngle);
-		//RequestSlotGroupInertialization(FName("DefaultGroup.FullBody"), 1.25);
-		IsTest = true;
-	}
-	LastControlToInputAngle = ControlToInputAngle;
-	*/
 }
 
 void ULocomotionInstance::UpdateSpeed2DRatio(float& Ratio)
