@@ -9,27 +9,36 @@ A C++-driven locomotion system in Unreal Engine, focused on **gameplay–animati
 [![Watch the video](https://img.youtube.com/vi/6jFna2a2Zhc/0.jpg)](https://www.youtube.com/watch?v=6jFna2a2Zhc)
 
 ---
+# Unreal Engine C++ Multiplayer Locomotion & Climbing System
+
+A C++-driven character movement system built around Unreal Engine's Character Movement framework, focused on gameplay–animation separation and multiplayer-compatible custom movement.
+
+The project addresses several practical engineering problems common to networked character systems:
+
+- Keeping gameplay and movement state as the source of truth instead of embedding gameplay decisions inside Animation Blueprints.
+- Extending Unreal's movement framework with custom climbing while preserving its multiplayer movement model.
+- Organizing locomotion, climbing, FPS/TPS presentation, and IK without coupling them into a monolithic animation system.
+
+## Key Design Decisions
+
+**Gameplay-driven animation**  
+Gameplay and movement state drive the animation layer, keeping movement decisions separate from presentation.
+
+**Climbing integrated with Character Movement**  
+Climbing uses `CharacterMovementComponent::PhysCustom`, keeping custom movement inside Unreal's existing movement and networking architecture.
+
+**Layered animation architecture**  
+Ground movement, airborne states, climbing, FPS/TPS presentation, montages, aim offset, and IK are organized as separate states and layers.
 
 ## Features
 
-* **System-driven animation**
-  Animation is driven by gameplay state (movement, direction, aim offset, lean, pivot), not Blueprint-only logic
-
-* **Multi-mode locomotion**
-  Supports FPS, TPS, and climbing with shared architecture and mode-specific behavior
-
-* **Custom climbing movement**
-  Implemented via `CharacterMovementComponent::PhysCustom`, including surface alignment, root motion climb-up, and ledge detection
-
-* **Client-predicted movement model**
-  Autonomous proxy and server execute the same logic, while simulated proxies follow replicated state
-
-* **Climb IK**
-  Trace-based hand and foot placement with smoothing
-
-* **Data-driven animation**
-  Animation assets configured via DataAssets for flexibility and reuse
-
+- FPS / TPS locomotion
+- Client-predicted multiplayer movement
+- Custom climbing and ledge detection
+- Root-motion climb-up
+- Hand and foot IK
+- Aim offset, lean, pivot and turn-in-place
+- Data-driven animation configuration
 ---
 
 ## Architecture
