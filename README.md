@@ -13,7 +13,7 @@ A C++-driven locomotion system in Unreal Engine, focused on **gameplay–animati
 
 A C++-driven character movement system built around Unreal Engine's Character Movement framework, focused on gameplay–animation separation and multiplayer-compatible custom movement.
 
-The project addresses several practical engineering problems common to networked character systems:
+**The project addresses several practical engineering problems common to networked character systems**:
 
 - Keeping gameplay and movement state as the source of truth instead of embedding gameplay decisions inside Animation Blueprints.
 - Extending Unreal's movement framework with custom climbing while preserving its multiplayer movement model.
